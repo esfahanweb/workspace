@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+service rsyslog start
+mkdir /run/php
+service php8.1-fpm start
+service cron start
+service supervisor start
+service --status-all
+sleep infinity
